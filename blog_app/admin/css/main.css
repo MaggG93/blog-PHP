@@ -1,0 +1,312 @@
+/* Estilo General */
+body {
+  font-family: "Pathway Gothic One", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+}
+
+/* Header */
+header {
+  background: #000000;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 50px; /* Ajusta el tamaño del logo */
+  max-width: 100%;
+  object-fit: contain;
+  padding: 0 10px;
+}
+
+/* Títulos dentro del header */
+.header-title {
+  text-align: left;
+  flex-grow: 1; /* Esto permite que el contenedor crezca y ocupe el espacio entre el logo y la navegación */
+}
+
+.header-title h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+/* Navegación */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #8d9091;
+}
+
+/* Contenedor Principal */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  display: flex;
+  text-align: justify;
+}
+
+.content {
+  flex: 2;
+  margin-right: 20px;
+  width: 100vw;
+}
+
+.content h2 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
+
+article {
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 20px; /* Añadir más padding para dar espacio alrededor del texto */
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: justify; /* Justificar el texto */
+}
+
+article h3 {
+  margin-top: 0;
+}
+
+/* Cuadro para el enlace "Leer más" */
+article a {
+  display: inline-block; /* Hace que el enlace se comporte como un cuadro */
+  padding: 8px 12px; /* Espaciado interno del enlace */
+  border: 1px solid #ddd; /* Borde alrededor del enlace */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: #ba9f27; /* Fondo blanco */
+  color: #fff; /* Color del texto */
+  text-decoration: none; /* Quita el subrayado */
+  font-size: 14px; /* Tamaño de fuente */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+article a:hover {
+  background-color: #f7f7f7; /* Fondo al pasar el mouse */
+  color: #333; /* Color del texto al pasar el mouse */
+  border-color: #ba9f27; /* Borde al pasar el mouse */
+}
+
+.post-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 1;
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
+
+/* Lista de categorías */
+.sidebar ul {
+  list-style: none; /* Quita los puntos de la lista */
+  padding: 0;
+}
+
+/* Cuadros para categorías */
+.sidebar ul li {
+  margin-bottom: 10px; /* Espaciado entre elementos */
+}
+
+.sidebar ul li a {
+  display: block; /* Hace que el enlace ocupe todo el cuadrito */
+  padding: 10px; /* Espaciado interno del cuadrito */
+  border: 1px solid #ddd; /* Borde alrededor del cuadrito */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: #fff; /* Fondo blanco */
+  color: #ba9f27; /* Color del texto */
+  text-decoration: none; /* Quita el subrayado */
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.3s ease; /* Transición suave para efectos */
+}
+
+.sidebar ul li a:hover {
+  background-color: #f7f7f7; /* Cambia el fondo al pasar el mouse */
+  color: #333; /* Cambia el color del texto */
+  border-color: #ba9f27; /* Cambia el color del borde */
+}
+
+/* Lista de etiquetas con diseño en filas de dos */
+.sidebar ul.categorias {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Divide en dos columnas */
+  gap: 10px; /* Espaciado entre elementos */
+}
+
+.sidebar ul.categorias li {
+  margin: 0; /* Quita margen extra */
+}
+
+.sidebar ul.categorias li a {
+  font-size: 14px; /* Cuadros más pequeños */
+  padding: 8px; /* Menor espacio interno */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fff;
+  color: #ba9f27;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul.categorias li a:hover {
+  background-color: #f7f7f7;
+  color: #333;
+  border-color: #ba9f27;
+}
+
+/* About Section */
+.header-background {
+  background: url("../img/unnamed.jpg") no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  padding: 180px 0;
+  text-align: center;
+}
+
+.header-background h2 {
+  margin: 0 0 10px 0;
+}
+
+/* Paginador */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  gap: 5px; /* Espacio entre enlaces */
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.pagination a:hover {
+  background-color: #ba9f27;
+  color: #fff;
+}
+
+.pagination a.active {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+.pagination a.prev,
+.pagination a.next {
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background: #000000;
+  color: #8d9091;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: auto; /* Empuja el footer al final */
+}
+
+.logo-footer {
+  height: 150px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.footer-links a {
+  color: #ba9f27;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Apilar el contenido y la barra lateral */
+    padding: 10px; /* Reducir el padding en pantallas pequeñas */
+  }
+
+  /* Ajustar el tamaño del contenido */
+  .content {
+    margin-right: 0; /* Quitar el margen derecho */
+    width: 100%; /* Hacer que ocupe todo el ancho */
+    margin-bottom: 20px; /* Separar el contenido de la barra lateral */
+  }
+
+  /* Ajustar el tamaño de la barra lateral */
+  .sidebar {
+    flex: 1; /* Asegura que ocupe el 100% del ancho disponible */
+    margin-top: 20px; /* Espacio entre el contenido y la barra lateral */
+  }
+
+  /* Etiquetas en columnas más pequeñas */
+  .sidebar ul.categorias {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Hacer que las etiquetas se muestren en una sola columna en pantallas pequeñas */
+    gap: 8px; /* Reducir el espacio entre las etiquetas */
+  }
+
+  /* Ajuste para los cuadros de categorías */
+  .sidebar ul li a {
+    font-size: 14px; /* Reducir el tamaño de la fuente */
+    padding: 8px; /* Reducir el padding de los enlaces */
+  }
+
+  /* Ajuste de los cuadros de "Leer más" */
+  article a {
+    padding: 6px 10px; /* Menos padding para un cuadro más pequeño */
+    font-size: 12px; /* Reducir el tamaño de la fuente */
+  }
+
+  /* Para evitar que el texto en los artículos se desborde */
+  article {
+    padding: 12px; /* Reducir padding en artículos */
+  }
+}

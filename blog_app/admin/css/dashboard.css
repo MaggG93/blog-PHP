@@ -1,0 +1,335 @@
+/* Estilo General */
+body {
+  font-family: "Pathway Gothic One", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+  background: #000000;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 50px;
+  max-width: 100%;
+  object-fit: contain;
+  padding: 0 10px;
+}
+
+/* Contenedor del título (h1 y h2) */
+.header-title {
+  text-align: left;
+  flex-grow: 1;
+}
+
+/* Títulos dentro del header */
+.header-title h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+/* Navegación */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+nav a:hover {
+  color: #8d9091;
+}
+
+/* Contenedor principal */
+.admin-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+/* El aside desaparece, dejando el espacio para content */
+.admin-sidebar {
+  display: none;
+}
+
+/* Contenedor principal de contenido */
+.admin-content {
+  flex: 1;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+/* Títulos dentro de la sección */
+.admin-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
+
+/* Paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  padding: 8px 12px;
+  margin: 0 5px;
+  background-color: #ba9f27;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+  background-color: #333;
+}
+
+.pagination a.active {
+  background-color: #333;
+  pointer-events: none;
+}
+
+/* Formulario de edición */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Etiquetas de los campos */
+form label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Campo de texto y área de texto */
+form input[type="text"],
+form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  transition: border-color 0.3s;
+}
+
+/* Cambiar el borde del campo cuando se hace focus */
+form input[type="text"]:focus,
+form textarea:focus {
+  border-color: #ba9f27; /* Color de borde similar al botón de editar */
+  outline: none;
+}
+
+/* Estilo para el textarea, para hacerlo más grande */
+form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Estilo específico para el campo de la URL de la imagen */
+form input[name="image_url"] {
+  margin-bottom: 20px; /* Espacio para que se vea bien el campo */
+}
+
+/* Botón de guardar cambios */
+form button {
+  padding: 12px 20px;
+  background-color: #ba9f27;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+form button:hover {
+  background-color: #8d9091;
+}
+
+/* Estilo de los mensajes de error y éxito */
+form .error-message {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form .success-message {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Tabla de posts */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f4f4f4;
+}
+
+table td a {
+  color: #ba9f27;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+table td a:hover {
+  background-color: #8d9091;
+}
+
+/* Botones Editar y Eliminar */
+.btn-edit {
+  background-color: #ba9f27;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #f44336;
+  color: white;
+}
+
+table td a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #000000;
+  color: #8d9091;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: auto; /* Empuja el footer al final de la página */
+}
+
+.logo-footer {
+  height: 150px; /* Ajusta el tamaño del logo */
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.footer-links a {
+  color: #ba9f27;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Botón Crear Nuevo Post */
+.btn-create {
+  display: inline-block;
+  background-color: #28a745; /* Verde para indicar acción positiva */
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.btn-create:hover {
+  background-color: #218838;
+}
+form textarea {
+  resize: vertical;
+  min-height: 80px; /* Tamaño mínimo más pequeño */
+  max-height: 200px; /* Evita que crezca demasiado */
+}
+
+form textarea#excerpt {
+  height: 100px; /* Tamaño específico para el campo de extracto */
+}
+
+form button {
+  display: inline-block; /* Hace que el botón solo ocupe su tamaño natural */
+  margin-top: 18px; /* Añade un pequeño espacio entre el formulario y el botón */
+  padding: 12px 20px; /* Ajusta el tamaño del botón */
+  background-color: #ba9f27;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #8d9091; /* Color al pasar el ratón */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Apilar el contenido y la barra lateral */
+    padding: 10px; /* Reducir el padding en pantallas pequeñas */
+  }
+  .admin-content {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  form input[type="text"],
+  form textarea {
+    font-size: 14px;
+  }
+
+  form button {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+}
